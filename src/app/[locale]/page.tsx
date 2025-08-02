@@ -1,4 +1,6 @@
 import {getTranslations} from 'next-intl/server';
+import AnalyticsWrapper from '@/components/AnalyticsWrapper';
+import TrackedButton from '@/components/TrackedButton';
 
 export default async function HomePage({
   params
@@ -9,7 +11,8 @@ export default async function HomePage({
   const t = await getTranslations({locale});
 
   return (
-    <div className="min-h-screen bg-white">
+    <AnalyticsWrapper locale={locale}>
+      <div className="min-h-screen bg-white">
       {/* Navigation */}
       <nav className="bg-white shadow-sm border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,12 +21,20 @@ export default async function HomePage({
               MindConnect
             </div>
             <div className="space-x-4">
-              <button className="text-gray-600 hover:text-blue-600">
+              <TrackedButton 
+                buttonId="nav-contact" 
+                locale={locale}
+                className="text-gray-600 hover:text-blue-600"
+              >
                 {t('footer.contact')}
-              </button>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+              </TrackedButton>
+              <TrackedButton 
+                buttonId="nav-cta" 
+                locale={locale}
+                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+              >
                 {t('hero.cta')}
-              </button>
+              </TrackedButton>
             </div>
           </div>
         </div>
@@ -42,12 +53,20 @@ export default async function HomePage({
             {t('hero.description')}
           </p>
           <div className="space-x-4">
-            <button className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors">
+            <TrackedButton 
+              buttonId="hero-cta" 
+              locale={locale}
+              className="bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
               {t('hero.cta')}
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors">
+            </TrackedButton>
+            <TrackedButton 
+              buttonId="hero-secondary" 
+              locale={locale}
+              className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors"
+            >
               {t('hero.secondary_cta')}
-            </button>
+            </TrackedButton>
           </div>
         </div>
       </section>
@@ -132,9 +151,13 @@ export default async function HomePage({
           <p className="text-xl text-blue-100 mb-8">
             {t('cta.description')}
           </p>
-          <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors">
+          <TrackedButton 
+            buttonId="final-cta" 
+            locale={locale}
+            className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-50 transition-colors"
+          >
             {t('cta.button')}
-          </button>
+          </TrackedButton>
         </div>
       </section>
 
@@ -151,6 +174,7 @@ export default async function HomePage({
           </div>
         </div>
       </footer>
-    </div>
+      </div>
+    </AnalyticsWrapper>
   );
 }
