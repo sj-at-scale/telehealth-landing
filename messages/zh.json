@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "用中文咨询心理健康",
+    "subtitle": "没有语言障碍的在线心理咨询服务",
+    "description": "与说中文的专业咨询师进行视频咨询。理解您文化背景的咨询师将倾听您的心声。",
+    "cta": "开始咨询",
+    "secondary_cta": "了解更多"
+  },
+  "problem": {
+    "title": "您是否有这些困扰？",
+    "points": [
+      "想用中文舒适地接受咨询，但很难找到合适的咨询师",
+      "希望遇到理解中华文化背景的咨询师",
+      "想要安全地进行在线咨询"
+    ]
+  },
+  "solution": {
+    "title": "现在可以轻松找到了",
+    "features": [
+      {
+        "title": "中文专业咨询师",
+        "description": "所有咨询师都是中文母语或流利使用者"
+      },
+      {
+        "title": "文化理解",
+        "description": "理解中华文化和价值观的咨询师"
+      },
+      {
+        "title": "在线视频咨询",
+        "description": "在家中舒适地接受专业心理咨询"
+      }
+    ]
+  },
+  "howItWorks": {
+    "title": "简单3步骤",
+    "steps": [
+      {
+        "step": "1",
+        "title": "选择咨询师",
+        "description": "查看资料，选择适合您的咨询师"
+      },
+      {
+        "step": "2",
+        "title": "预约时间",
+        "description": "在方便的时间安排咨询"
+      },
+      {
+        "step": "3",
+        "title": "视频咨询",
+        "description": "通过安全的视频平台接受咨询"
+      }
+    ]
+  },
+  "cta": {
+    "title": "今天就开始吧",
+    "description": "首次咨询免费",
+    "button": "申请免费咨询"
+  },
+  "footer": {
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "contact": "联系我们"
+  }
+}
