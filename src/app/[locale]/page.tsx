@@ -1,7 +1,12 @@
-import {useTranslations} from 'next-intl';
+import {getTranslations} from 'next-intl/server';
 
-export default function HomePage() {
-  const t = useTranslations();
+export default async function HomePage({
+  params
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const {locale} = await params;
+  const t = await getTranslations({locale});
 
   return (
     <div className="min-h-screen bg-white">
